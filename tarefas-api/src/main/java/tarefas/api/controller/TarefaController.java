@@ -1,5 +1,5 @@
 package tarefas.api.controller;
 
-public class UsuarioController {
+public class TarefaController {
 
 }

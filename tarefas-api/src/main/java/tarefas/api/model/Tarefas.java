@@ -1,5 +1,9 @@
 package tarefas.api.model;
 
+import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,11 +15,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-
-public class Usuario {
-    @Id
+public class Tarefas {
     @GeneratedValue
+    @Id
     private Long id;
-    private String nome;
-    private String email;
+    private String titulo;
+    private String descricao;
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate dataEntrega;
 }
